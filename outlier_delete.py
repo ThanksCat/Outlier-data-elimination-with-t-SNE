@@ -444,7 +444,7 @@ csv_df = pd.read_csv(csv_path, encoding='euc-kr')
 for idx in range(5):
     csv_df = csv_df.drop([idx for idx in outlier_idx_pc[idx]])
 
-
+csv_df.to_csv('new.csv')
 # t-SNE visualization
 tx_01 = scale_to_01_range(tx)
 ty_01 = scale_to_01_range(ty)
