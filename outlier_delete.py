@@ -441,7 +441,8 @@ for iter, label in enumerate(colors_per_class):
 
 # remove outlier
 csv_df = pd.read_csv(csv_path, encoding='euc-kr')
-csv_df = csv_df.drop([idx for idx in outlier_idx_pc[label]])
+for idx in range(5):
+    csv_df = csv_df.drop([idx for idx in outlier_idx_pc[idx]])
 
 
 # t-SNE visualization
